@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -27,11 +26,10 @@ interface RiskAssessmentProps {
 }
 
 const getFinancialImpact = (riskScore: number): string => {
-  if (riskScore >= 12) return ">20M Dolar";
-  if (riskScore >= 9) return "20 - 10M Dolar";
-  if (riskScore >= 6) return "10 - 5M Dolar";
-  if (riskScore >= 3) return "5 - 1M Dolar";
-  return "1 - 0M Dolar";
+  if (riskScore >= 12) return "+1.000.000 TL";
+  if (riskScore >= 8) return "500.000 - 1.000.000 TL";
+  if (riskScore >= 4) return "200.000 - 500.000 TL";
+  return "0 - 200.000 TL";
 };
 
 export const RiskAssessment = ({ 
