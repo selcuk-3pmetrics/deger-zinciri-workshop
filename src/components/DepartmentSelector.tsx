@@ -1,5 +1,5 @@
 
-import { Circle, Triangle, Hexagon, Square, Star, Leaf, RectangleHorizontal, RectangleVertical, BarChart, Car, Wrench, Briefcase } from "lucide-react";
+import { Circle, Triangle, Hexagon, Square, Star, Leaf, BarChart, Server, ShieldCheck, Users, HardHat, Wrench, Factory, Lightbulb, BarChart3, Truck, PieChart, LineChart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type Department = {
@@ -10,18 +10,18 @@ export type Department = {
 };
 
 const departments: Department[] = [
-  { id: "management", name: "Yönetim-Strateji", icon: Hexagon, color: "text-[#9b87f5]" },
-  { id: "accounting", name: "Muhasebe", icon: Triangle, color: "text-[#7E69AB]" },
-  { id: "finance", name: "Finans", icon: Square, color: "text-[#F97316]" },
-  { id: "budgeting", name: "Bütçe ve Raporlama", icon: BarChart, color: "text-[#0EA5E9]" },
-  { id: "investor", name: "Yatırımcı İlişkileri", icon: Star, color: "text-[#D946EF]" },
-  { id: "marketing", name: "Pazarlama", icon: RectangleVertical, color: "text-[#8B5CF6]" },
-  { id: "hr", name: "İnsan Kaynakları ve İdari İşler", icon: Circle, color: "text-[#1EAEDB]" },
-  { id: "it", name: "Bilgi Tekonolojileri", icon: Triangle, color: "text-[#221F26]" },
-  { id: "vehicle", name: "Araç Satın Alma", icon: Car, color: "text-[#D946EF]" },
-  { id: "used", name: "2.El Araç Yönetimi", icon: Briefcase, color: "text-[#403E43]" },
-  { id: "maintenance", name: "Araç Bakım & Hasar Yönetimi", icon: Wrench, color: "text-[#FEC6A1]" },
-  { id: "sales", name: "Satış ve İş Geliştirme", icon: Star, color: "text-[#FDE1D3]" }
+  { id: "cfo", name: "CFO, Konsolidasyon ve Yatırımcı İlişkileri", icon: BarChart, color: "text-[#9b87f5]" },
+  { id: "it", name: "IT", icon: Server, color: "text-[#7E69AB]" },
+  { id: "quality", name: "Kalite Güvence", icon: ShieldCheck, color: "text-[#F97316]" },
+  { id: "hr", name: "İK ve Kurumsal İletişim", icon: Users, color: "text-[#0EA5E9]" },
+  { id: "isg", name: "İSG", icon: HardHat, color: "text-[#D946EF]" },
+  { id: "technical", name: "Teknik", icon: Wrench, color: "text-[#8B5CF6]" },
+  { id: "production", name: "Üretim", icon: Factory, color: "text-[#1EAEDB]" },
+  { id: "rnd", name: "Ar-ge / Amb. Ar-ge", icon: Lightbulb, color: "text-[#221F26]" },
+  { id: "marketing", name: "Pazarlama", icon: BarChart3, color: "text-[#D946EF]" },
+  { id: "supply", name: "Tedarik Zinciri", icon: Truck, color: "text-[#403E43]" },
+  { id: "sales", name: "Satış", icon: PieChart, color: "text-[#FEC6A1]" },
+  { id: "analytics", name: "İş Analitiği ve İş Süreçleri Geliştirme", icon: LineChart, color: "text-[#FDE1D3]" }
 ];
 
 interface DepartmentSelectorProps {

@@ -1,17 +1,17 @@
 
 export const departments = {
-  management: "Yönetim-Strateji",
-  accounting: "Muhasebe",
-  finance: "Finans",
-  budgeting: "Bütçe ve Raporlama",
-  investor: "Yatırımcı İlişkileri",
-  marketing: "Pazarlama",
-  hr: "İnsan Kaynakları ve İdari İşler",
-  it: "Bilgi Tekonolojileri",
-  vehicle: "Araç Satın Alma",
-  used: "2.El Araç Yönetimi",
-  maintenance: "Araç Bakım & Hasar Yönetimi",
-  sales: "Satış ve İş Geliştirme"
+  "cfo": "CFO, Konsolidasyon ve Yatırımcı İlişkileri",
+  "it": "IT",
+  "quality": "Kalite Güvence",
+  "hr": "İK ve Kurumsal İletişim",
+  "isg": "İSG",
+  "technical": "Teknik",
+  "production": "Üretim",
+  "rnd": "Ar-ge / Amb. Ar-ge",
+  "marketing": "Pazarlama",
+  "supply": "Tedarik Zinciri",
+  "sales": "Satış",
+  "analytics": "İş Analitiği ve İş Süreçleri Geliştirme"
 } as const;
 
 export const valueChainSteps = {
