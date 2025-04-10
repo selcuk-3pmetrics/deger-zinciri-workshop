@@ -3,44 +3,39 @@ import { cn } from "@/lib/utils";
 
 export const valueChainSteps = [
   {
-    id: "vehicle-supply",
-    name: "Araç Tedariği",
-    description: "Araç tedarik ve yönetim süreçleri",
+    id: "raw-material",
+    name: "HAM MADDE TEDARİĞİ",
+    description: "Ham madde tedarik süreçleri",
   },
   {
-    id: "fleet-management",
-    name: "Filo Yönetimi",
-    description: "Filo operasyon ve bakım süreçleri",
+    id: "production",
+    name: "ÜRETİM",
+    description: "Üretim süreçleri",
   },
   {
-    id: "reservation-rental",
-    name: "Rezervasyon ve Kiralama",
-    description: "Rezervasyon ve kiralama süreçleri",
+    id: "packaging",
+    name: "AMBALAJLAMA",
+    description: "Ürün ambalajlama süreçleri",
   },
   {
-    id: "customer-service",
-    name: "Müşteri Hizmetleri",
-    description: "Müşteri ilişkileri yönetimi",
+    id: "storage",
+    name: "DEPOLAMA",
+    description: "Ürün depolama süreçleri",
   },
   {
-    id: "marketing-sales",
-    name: "Pazarlama ve Satış",
-    description: "Pazarlama ve satış stratejileri",
+    id: "distribution",
+    name: "DAĞITIM VE LOJİSTİK",
+    description: "Dağıtım ve lojistik süreçleri",
   },
   {
-    id: "technology-it",
-    name: "Teknoloji ve Bilgi Sistemleri",
-    description: "Teknolojik altyapı ve sistemler",
+    id: "sales",
+    name: "SATIŞ",
+    description: "Satış süreçleri",
   },
   {
-    id: "legal-compliance",
-    name: "Hukuk ve Uyumluluk",
-    description: "Yasal süreçler ve uyum yönetimi",
-  },
-  {
-    id: "finance-accounting",
-    name: "Finans ve Muhasebe",
-    description: "Finansal yönetim ve muhasebe süreçleri",
+    id: "consumption",
+    name: "TÜKETİM",
+    description: "Tüketim sonrası süreçler",
   },
 ];
 
@@ -59,10 +54,10 @@ export const ValueChain = ({ selectedStep, onSelect }: ValueChainProps) => {
             key={step.id}
             onClick={() => onSelect(step.id)}
             className={cn(
-              "value-chain-step text-left",
+              "value-chain-step text-left p-4 rounded-lg border transition-all duration-200",
               selectedStep === step.id 
                 ? "bg-brand-teal/10 border-brand-teal shadow-md transform scale-105" 
-                : "hover:bg-gray-50"
+                : "hover:bg-gray-50 border-gray-200"
             )}
           >
             <h3 className="font-medium mb-2">{step.name}</h3>
