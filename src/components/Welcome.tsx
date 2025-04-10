@@ -11,7 +11,7 @@ const Welcome = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "borlease") {
+    if (password === "kervangıda") {
       navigate("/dashboard");
     } else {
       toast.error("Yanlış şifre!");
@@ -20,20 +20,20 @@ const Welcome = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#005CB9]/20 to-black/5 flex flex-col items-center justify-between p-4">
+    <div className="min-h-screen bg-gradient-to-b from-[#ED1C24]/20 to-black/5 flex flex-col items-center justify-between p-4">
       <div className="max-w-4xl w-full flex-grow flex flex-col items-center justify-center space-y-8">
         <div className="flex flex-col items-center">
-          <img src="/lovable-uploads/75ae9855-42f3-4386-8d22-71a11a351a81.png" alt="Borlease Logo" className="h-16" />
+          <img src="/lovable-uploads/ea3f2808-762e-4388-9c7d-d6f3ac66d5d7.png" alt="Kervan Gıda Logo" className="h-24" />
         </div>
         
-        <h1 className="text-4xl font-bold text-center text-[#005CB9] mb-6">
+        <h1 className="text-4xl font-bold text-center text-[#ED1C24] mb-6">
           Değer Zinciri Çalışmasına Hoşgeldiniz
         </h1>
         
         <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
             Merhabalar, Hoş Geldiniz!<br/><br/>
-            Bu çalışmada, Borlease Değer Zinciri Adımları ile risk, fırsat ve önemlilik konularını eşleştirerek kapsamlı bir analiz gerçekleştireceğiz. Her bir değer zinciri adımını detaylı şekilde ele alarak, süreçlerdeki olası riskleri tanımlayacak, bu risklerin derecelerini ortaya koyacak ve fırsatları belirleyeceğiz. Ayrıca, her adımın şirketin sürdürülebilirliği ve stratejik hedefleri açısından önemlilik derecesini değerlendireceğiz.<br/><br/>
+            Bu çalışmada, Kervan Gıda Değer Zinciri Adımları ile risk, fırsat ve önemlilik konularını eşleştirerek kapsamlı bir analiz gerçekleştireceğiz. Her bir değer zinciri adımını detaylı şekilde ele alarak, süreçlerdeki olası riskleri tanımlayacak, bu risklerin derecelerini ortaya koyacak ve fırsatları belirleyeceğiz. Ayrıca, her adımın şirketin sürdürülebilirliği ve stratejik hedefleri açısından önemlilik derecesini değerlendireceğiz.<br/><br/>
             Bu analiz, hem operasyonel süreçlerin iyileştirilmesine hem de uzun vadeli büyüme ve başarı hedeflerinin daha sağlam temellere oturtulmasına katkı sağlayacaktır.
           </p>
           
@@ -51,7 +51,7 @@ const Welcome = () => {
                 className="w-full"
               />
             </div>
-            <Button type="submit" className="w-full bg-[#005CB9] hover:bg-[#005CB9]/90">
+            <Button type="submit" className="w-full bg-[#ED1C24] hover:bg-[#ED1C24]/90">
               Giriş Yap
             </Button>
           </form>
