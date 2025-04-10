@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -16,31 +17,11 @@ interface ClimateRiskAssessmentProps {
 }
 
 const getFinancialImpact = (riskScore: number): string => {
-  if (riskScore > 400) return ">20M Dolar";
-  if (riskScore > 200) return "20 - 10M Dolar";
-  if (riskScore > 70) return "10 - 5M Dolar";
-  if (riskScore > 20) return "5 - 1M Dolar";
+  if (riskScore >= 12) return ">20M Dolar";
+  if (riskScore >= 9) return "20 - 10M Dolar";
+  if (riskScore >= 6) return "10 - 5M Dolar";
+  if (riskScore >= 3) return "5 - 1M Dolar";
   return "1 - 0M Dolar";
-};
-
-const getProbabilityDescription = (value: number): string => {
-  if (value === 10) return "Beklenir, kesin";
-  if (value === 8) return "Yüksek/oldukça mümkün";
-  if (value === 6) return "Olası";
-  if (value === 3) return "Mümkün, fakat düşük";
-  if (value === 1) return "Beklenmez fakat mümkün";
-  if (value === 0.1) return "Beklenmez";
-  return "";
-};
-
-const getFrequencyDescription = (value: number): string => {
-  if (value === 10) return "Hemen hemen sürekli (Hergün)";
-  if (value === 8) return "Sık (Ayda bir veya birkaç defa)";
-  if (value === 6) return "Ara sıra (6 ayda 1)";
-  if (value === 3) return "Sık değil (Yılda birkaç defa)";
-  if (value === 1) return "Seyrek (3 yılda 1)";
-  if (value === 0.1) return "Çok seyrek (>3 yıl)";
-  return "";
 };
 
 const getTermLabel = (term: string): string => {
@@ -63,9 +44,8 @@ export const ClimateRiskAssessment = ({
   selectedStep,
   selectedTerm
 }: ClimateRiskAssessmentProps) => {
+  const [impact, setImpact] = useState("");
   const [probability, setProbability] = useState("");
-  const [frequency, setFrequency] = useState("");
-  const [severity, setSeverity] = useState("");
   const [savedAssessments, setSavedAssessments] = useState<RiskAssessmentData[]>([]);
 
   useEffect(() => {
@@ -80,21 +60,20 @@ export const ClimateRiskAssessment = ({
   }, [savedAssessments]);
 
   const handleCalculate = () => {
-    const p = Number(probability);
-    const f = Number(frequency);
-    const s = Number(severity);
+    const impactValue = Number(impact);
+    const probabilityValue = Number(probability);
 
     if (!selectedDepartment || !selectedRisk || !selectedStep || !selectedTerm) {
       toast.error("Lütfen departman, risk, değer zinciri adımı ve vade seçin");
       return;
     }
 
-    if (!p || !f || !s) {
-      toast.error("Lütfen tüm değerleri girin");
+    if (!impactValue || !probabilityValue) {
+      toast.error("Lütfen etki ve olasılık değerlerini girin");
       return;
     }
 
-    const riskScore = p * f * s;
+    const riskScore = impactValue * probabilityValue;
     const financialImpact = getFinancialImpact(riskScore);
     onCalculate(riskScore, financialImpact);
 
@@ -103,9 +82,8 @@ export const ClimateRiskAssessment = ({
       risk: selectedRisk,
       valueChainStep: selectedStep,
       term: selectedTerm,
-      probability: p,
-      frequency: f,
-      severity: s,
+      impact: impactValue,
+      probability: probabilityValue,
       riskScore,
       financialImpact,
       date: new Date().toISOString(),
@@ -131,9 +109,8 @@ export const ClimateRiskAssessment = ({
       risk: assessment.risk,
       valueChainStep: getValueChainStepName(assessment.valueChainStep),
       term: getTermLabel(assessment.term),
-      probability: assessment.probability,
-      frequency: assessment.frequency,
-      severity: assessment.severity,
+      etki: assessment.impact,
+      olasılık: assessment.probability,
       riskScore: assessment.riskScore,
       financialImpact: assessment.financialImpact,
       date: assessment.date
@@ -151,14 +128,10 @@ export const ClimateRiskAssessment = ({
       <h2 className="text-xl font-semibold mb-4">İklim Riski Değerlendirmesi</h2>
       
       <RiskInputs
+        impact={impact}
+        setImpact={setImpact}
         probability={probability}
         setProbability={setProbability}
-        frequency={frequency}
-        setFrequency={setFrequency}
-        severity={severity}
-        setSeverity={setSeverity}
-        getProbabilityDescription={getProbabilityDescription}
-        getFrequencyDescription={getFrequencyDescription}
       />
 
       <div className="flex gap-2">

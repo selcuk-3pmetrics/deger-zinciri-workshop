@@ -16,6 +16,36 @@ const getTermLabel = (term: string): string => {
   }
 };
 
+const getImpactLabel = (impact: number): string => {
+  switch (impact) {
+    case 1:
+      return "Düşük";
+    case 2:
+      return "Orta";
+    case 3:
+      return "Yüksek";
+    case 4:
+      return "Kritik";
+    default:
+      return "";
+  }
+};
+
+const getProbabilityLabel = (probability: number): string => {
+  switch (probability) {
+    case 1:
+      return "Düşük";
+    case 2:
+      return "Orta";
+    case 3:
+      return "Yüksek";
+    case 4:
+      return "Kritik";
+    default:
+      return "";
+  }
+};
+
 interface SavedRiskAssessmentsProps {
   assessments: RiskAssessmentData[];
   onDelete: (index: number) => void;
@@ -35,11 +65,19 @@ export const SavedRiskAssessments = ({ assessments, onDelete }: SavedRiskAssessm
               <p className="text-sm text-gray-600">
                 {getDepartmentName(assessment.department)} - {getValueChainStepName(assessment.valueChainStep)}
               </p>
+              {assessment.term && (
+                <p className="text-sm text-gray-600">
+                  Vade: {getTermLabel(assessment.term)}
+                </p>
+              )}
               <p className="text-sm text-gray-600">
-                Vade: {getTermLabel(assessment.term)}
+                Etki: {assessment.impact} ({getImpactLabel(assessment.impact)})
               </p>
               <p className="text-sm text-gray-600">
-                Risk Skoru: {assessment.riskScore.toFixed(2)}
+                Olasılık: {assessment.probability} ({getProbabilityLabel(assessment.probability)})
+              </p>
+              <p className="text-sm text-gray-600">
+                Risk Skoru: {assessment.riskScore}
               </p>
               <p className="text-sm text-gray-600">
                 Finansal Etki: {assessment.financialImpact}

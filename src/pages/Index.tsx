@@ -91,10 +91,10 @@ const Index = () => {
   };
 
   const getRiskDegree = (score: number): string => {
-    if (score > 400) return "Çok Yüksek";
-    if (score > 200) return "Yüksek";
-    if (score > 70) return "Orta";
-    if (score > 20) return "Düşük";
+    if (score >= 12) return "Çok Yüksek";
+    if (score >= 9) return "Yüksek";
+    if (score >= 6) return "Orta";
+    if (score >= 2) return "Düşük";
     return "Çok Düşük";
   };
 
