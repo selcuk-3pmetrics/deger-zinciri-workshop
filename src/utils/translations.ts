@@ -1,4 +1,3 @@
-
 export const departments = {
   "cfo": "CFO, Konsolidasyon ve Yatırımcı İlişkileri",
   "it": "IT",
@@ -15,13 +14,13 @@ export const departments = {
 } as const;
 
 export const valueChainSteps = {
-  "raw-material": "Ham madde tedarİğİ",
-  "production": "Üretİm",
+  "raw-material": "Ham madde tedarigi",
+  "production": "Uretim",
   "packaging": "Ambalajlama",
   "storage": "Depolama",
-  "distribution": "Dağıtım ve lojİstİk",
-  "sales": "Satış",
-  "consumption": "Tüketİm"
+  "distribution": "Dagitim ve lojistik",
+  "sales": "Satis",
+  "consumption": "Tuketim"
 } as const;
 
 export const getDepartmentName = (departmentId: string): string => {
