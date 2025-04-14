@@ -11,45 +11,45 @@ const materialityItems: MaterialityItem[] = [
   {
     category: "Çevre",
     items: [
-      "Emisyon Yönetimi",
-      "İklim Değişikliği",
-      "Enerji Verimliliği ve Yönetimi",
-      "Temiz Filo Teknolojisi",
-      "Paylaşımcı Yolculuk",
       "Su Yönetimi",
+      "Enerji Verimliliği ve Yönetimi",
+      "Gıda İsrafı",
+      "Yenilebilir Enerjiye Geçiş",
       "Atık Yönetimi",
-      "Ulaşımın Elektrifikasyonu",
-      "Biyoçeşitlilik",
-      "Çevresel Yatırımlar"
+      "İklim Değişikliği",
+      "Çevre Yönetimi",
+      "Ham Maddeye Erişim",
+      "Çevresel Risklerin Belirlenmesi ve Yönetimi",
+      "Döngüsel Ekonomi"
     ]
   },
   {
     category: "Sosyal",
     items: [
-      "Çalışan Memnuniyeti ve Bağlılığı",
-      "Çeşitlilik ve Cinsiyet Eşitliliği",
-      "Yetenek Gelişimi",
       "İnsan Hakları",
+      "Çalışan Memnuniyeti ve Bağlılığı",
       "İş Sağlığı ve Güvenliği",
-      "Kurumsal Sosyal Sorumluluk",
-      "Gönüllülük",
-      "Toplumsal Yatırımlar",
-      "Örgütlenme Özgürlüğü"
+      "Tüketici Sağlığı ve Memnuniyeti",
+      "Çalışan Refahı",
+      "Yetenek Gelişimi",
+      "Kapsayıcılık ve Fırsat Eşitliği",
+      "Çalışan Katılımı",
+      "Tedarik Zincirinde Sürdürülebilirlik"
     ]
   },
   {
     category: "Yönetişim",
     items: [
-      "Etik Uyum ve Yolsuzlukla Mücadele",
-      "Şeffaflık ve İzlenebilirlik",
-      "Araç ve Yol Güvenliği",
-      "Tedarik Zincirinde Sürdürülebilirlik",
-      "Marka İtibarı ve Bağlılığı",
-      "Kurumsal Yönetişim",
-      "Kurumsal Risk Yönetimi",
-      "Müşteri Memnuniyeti",
+      "Gıda Güvenliği ve Kalitesi",
+      "Etik İlkelere Uyum",
       "Dijitalleşme",
-      "Veri Gizliliği ve Sibergüvenlik"
+      "Veri Güvenliği",
+      "Şeffaflık ve İzlenebilirlik",
+      "Kurumsal Yönetişim",
+      "Ar-Ge ve İnovasyon",
+      "Kurumsal Risk Yönetimi",
+      "Stratejik Planlama",
+      "Ekonomik Değer Yaratılması"
     ]
   }
 ];
