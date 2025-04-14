@@ -4,12 +4,12 @@ import { cn } from "@/lib/utils";
 export const valueChainSteps = [
   {
     id: "raw-material",
-    name: "Ham madde tedarigi",
+    name: "Ham madde tedariği",
     description: "Ham madde tedarik süreçleri",
   },
   {
     id: "production",
-    name: "Uretim",
+    name: "Üretim",
     description: "Üretim süreçleri",
   },
   {
@@ -24,17 +24,17 @@ export const valueChainSteps = [
   },
   {
     id: "distribution",
-    name: "Dagitim ve lojistik",
+    name: "Dağıtım ve Lojistik",
     description: "Dağıtım ve lojistik süreçleri",
   },
   {
     id: "sales",
-    name: "Satis",
+    name: "Satış",
     description: "Satış süreçleri",
   },
   {
     id: "consumption",
-    name: "Tuketim",
+    name: "Tüketim",
     description: "Tüketim sonrası süreçler",
   },
 ];
