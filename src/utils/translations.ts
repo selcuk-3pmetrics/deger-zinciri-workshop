@@ -15,13 +15,13 @@ export const departments = {
 } as const;
 
 export const valueChainSteps = {
-  "raw-material": "HAM MADDE TEDARİĞİ",
-  "production": "ÜRETİM",
-  "packaging": "AMBALAJLAMA",
-  "storage": "DEPOLAMA",
-  "distribution": "DAĞITIM VE LOJİSTİK",
-  "sales": "SATIŞ",
-  "consumption": "TÜKETİM"
+  "raw-material": "Ham madde tedarİğİ",
+  "production": "Üretİm",
+  "packaging": "Ambalajlama",
+  "storage": "Depolama",
+  "distribution": "Dağıtım ve lojİstİk",
+  "sales": "Satış",
+  "consumption": "Tüketİm"
 } as const;
 
 export const getDepartmentName = (departmentId: string): string => {

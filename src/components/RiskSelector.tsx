@@ -9,13 +9,6 @@ type RiskMapping = {
 };
 
 const riskMappings: RiskMapping[] = [
-  { area: "İklim Fiziksel Riskleri", risk: "Aşırı Hava Olayları" },
-  { area: "İklim Fiziksel Riskleri", risk: "Enerji Maliyetlerinde Artış" },
-  { area: "İklim Fiziksel Riskleri", risk: "Su Stresi ve Kıtlığı" },
-  { area: "İklim Fiziksel Riskleri", risk: "Biyoçeşitlilik" },
-  { area: "İklim Geçiş Riskleri", risk: "Düzenleyici Riskler" },
-  { area: "İklim Geçiş Riskleri", risk: "Ar-Ge Yatırımları" },
-  { area: "İklim Geçiş Riskleri", risk: "Paydaş Beklentilerindeki Değişimler" },
   { area: "Çevre", risk: "İklim Değişikliği" },
   { area: "Çevre", risk: "Doğal Kaynak Kıtlığı" },
   { area: "Çevre", risk: "Kritik Düzeyde Küresel Sistem Değişimi" },
